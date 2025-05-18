@@ -182,7 +182,7 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <!-- 标题 -->
-      <h1 style="text-align: center; color: #339CFF; font-weight: bold; margin-bottom: 1rem;">
+      <h1 style="text-align: center; color: #339CFF; font-weight: bold; font-size: 2.5rem; margin-bottom: 1rem;">
         Paper Overview
       </h1>
       <img id="teaser" src="./static/images/teaser.png" alt="Teaser Image" style="width: 100%;" />
@@ -193,6 +193,119 @@
   </div>
 </section> 
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- 标题 -->
+    <h1 style="text-align: center; color: #339CFF; font-weight: bold; font-size: 2.5rem; margin-bottom: 1rem;">
+      Leaderboard
+    </h1>
+
+    <!-- 简介文字 -->
+    <p style="font-size: 1.1rem; line-height: 1.6;">
+      We report the average nDCG@10 score across 8 datasets in R2MED.
+      <strong>LLM+Retrievers</strong> means LLM generates answers before retrieval (HyDE),
+      details please refer to 
+      <a href="https://github.com/R2MED/R2MED/tree/main/src" target="_blank">
+        https://github.com/R2MED/R2MED/tree/main/src
+      </a>.
+    </p>
+
+    <!-- Submission说明 -->
+    <p style="margin-top: 1.5rem; font-size: 1.1rem; line-height: 1.6;">
+      <strong>🌟 Leaderboard submission 🌟</strong><br>
+      If you would like to submit your results to the leaderboard, email the results to 
+      <a href="mailto:2021000171@ruc.edu.cn">2021000171@ruc.edu.cn</a>!
+      Optionally, you are encouraged to provide the link to the open-sourced codebase.
+      Otherwise, you may provide a short description on the used models and approaches 
+      (e.g., size of retrieval model, whether LLMs like GPT-4 are used, etc.)!
+    </p>
+
+    <!-- 表格 -->
+    <div style="overflow-x:auto; margin-top: 2rem;">
+      <table style="width: 100%; border-collapse: collapse; text-align: center; font-size: 1rem;">
+        <thead style="background-color: #f8f8ff;">
+          <tr style="border-bottom: 2px solid #ddd;">
+            <th>Rank</th>
+            <th>LLM</th>
+            <th>Retriever</th>
+            <th>Avg.</th>
+            <th>Biology</th>
+            <th>Bioinformatics</th>
+            <th>MedicalSciences</th>
+            <th>MedXpertQA-Exam</th>
+            <th>MedQA-Diag</th>
+            <th>PMC-Treatment</th>
+            <th>PMC-Clinical</th>
+            <th>IIYi-Clinical</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid #eee;">
+            <td><strong>1</strong><br><span style="background-color: #888; color: white; padding: 2px 6px; border-radius: 6px; font-size: 0.8rem;">May 14, 2025</span></td>
+            <td>
+              <a href="#">GPT-4</a>
+            </td>
+            <td>
+              <a href="#" style="color: #9370DB; font-weight: bold;">BM25 + GPT4 reasoning + Qwen reranking</a><br>
+              <em>Zach Nussbaum (NomicAI)</em>
+            </td>
+            <td><strong>37.8</strong></td>
+            <td>38.1</td>
+            <td>37.5</td>
+            <td>37.6</td>
+            <td>37.9</td>
+            <td>38.2</td>
+            <td>37.4</td>
+            <td>37.7</td>
+            <td>37.9</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #eee;">
+            <td><strong>2</strong><br><span style="background-color: #888; color: white; padding: 2px 6px; border-radius: 6px; font-size: 0.8rem;">Apr 29, 2025</span></td>
+            <td>
+              <a href="#">Claude 3</a>
+            </td>
+            <td>
+              <a href="#" style="color: #9370DB; font-weight: bold;">ReasonIR + reranker</a><br>
+              <em>Meta, UWashington, etc.</em>
+            </td>
+            <td><strong>36.9</strong></td>
+            <td>36.6</td>
+            <td>36.8</td>
+            <td>37.2</td>
+            <td>36.7</td>
+            <td>36.5</td>
+            <td>37.0</td>
+            <td>37.1</td>
+            <td>37.0</td>
+          </tr>
+          <tr>
+            <td><strong>3</strong><br><span style="background-color: #888; color: white; padding: 2px 6px; border-radius: 6px; font-size: 0.8rem;">Oct 22, 2024</span></td>
+            <td>
+              <a href="#">ChatGPT-3.5</a>
+            </td>
+            <td>
+              <a href="#" style="color: #9370DB; font-weight: bold;">JudgeRank</a><br>
+              <em>ICLR submission</em>
+            </td>
+            <td><strong>35.8</strong></td>
+            <td>35.5</td>
+            <td>35.6</td>
+            <td>35.8</td>
+            <td>35.7</td>
+            <td>36.0</td>
+            <td>35.6</td>
+            <td>35.7</td>
+            <td>35.7</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+  
+
+  
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">

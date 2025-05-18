@@ -6,7 +6,7 @@
         content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>R2RMED: A Benchmark for Reasoning-Driven Medical Retrieval</title>
+  <title>R2MED: A Benchmark for Reasoning-Driven Medical Retrieval</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -230,8 +230,8 @@
             <th>Retriever</th>
             <th>Avg.</th>
             <th>Biology</th>
-            <th>Bioinformatics</th>
-            <th>MedicalSciences</th>
+            <th>Bio-informatics</th>
+            <th>Medical-Sciences</th>
             <th>MedXpertQA-Exam</th>
             <th>MedQA-Diag</th>
             <th>PMC-Treatment</th>
@@ -241,61 +241,29 @@
         </thead>
         <tbody>
           <tr style="border-bottom: 1px solid #eee;">
-            <td><strong>1</strong><br><span style="background-color: #888; color: white; padding: 2px 6px; border-radius: 6px; font-size: 0.8rem;">May 14, 2025</span></td>
+            <td class="rank-cell"></td>
             <td>
-              <a href="#">GPT-4</a>
+              <a href="#">o3-mini</a>
             </td>
             <td>
-              <a href="#" style="color: #9370DB; font-weight: bold;">BM25 + GPT4 reasoning + Qwen reranking</a><br>
+              <a href="#" style="color: #9370DB; font-weight: bold;">BGE</a><br>
               <em>Zach Nussbaum (NomicAI)</em>
             </td>
             <td><strong>37.8</strong></td>
-            <td>38.1</td>
-            <td>37.5</td>
-            <td>37.6</td>
-            <td>37.9</td>
-            <td>38.2</td>
-            <td>37.4</td>
-            <td>37.7</td>
-            <td>37.9</td>
+            <td>38.1</td><td>37.5</td><td>37.6</td><td>37.9</td><td>38.2</td><td>37.4</td><td>37.7</td><td>37.9</td>
           </tr>
+          
           <tr style="border-bottom: 1px solid #eee;">
-            <td><strong>2</strong><br><span style="background-color: #888; color: white; padding: 2px 6px; border-radius: 6px; font-size: 0.8rem;">Apr 29, 2025</span></td>
+            <td class="rank-cell"></td>
             <td>
-              <a href="#">Claude 3</a>
+              <a href="#">GPT-4o</a>
             </td>
             <td>
-              <a href="#" style="color: #9370DB; font-weight: bold;">ReasonIR + reranker</a><br>
-              <em>Meta, UWashington, etc.</em>
+              <a href="#" style="color: #9370DB; font-weight: bold;">BGE</a><br>
+              <em>Zach Nussbaum (NomicAI)</em>
             </td>
-            <td><strong>36.9</strong></td>
-            <td>36.6</td>
-            <td>36.8</td>
-            <td>37.2</td>
-            <td>36.7</td>
-            <td>36.5</td>
-            <td>37.0</td>
-            <td>37.1</td>
-            <td>37.0</td>
-          </tr>
-          <tr>
-            <td><strong>3</strong><br><span style="background-color: #888; color: white; padding: 2px 6px; border-radius: 6px; font-size: 0.8rem;">Oct 22, 2024</span></td>
-            <td>
-              <a href="#">ChatGPT-3.5</a>
-            </td>
-            <td>
-              <a href="#" style="color: #9370DB; font-weight: bold;">JudgeRank</a><br>
-              <em>ICLR submission</em>
-            </td>
-            <td><strong>35.8</strong></td>
-            <td>35.5</td>
-            <td>35.6</td>
-            <td>35.8</td>
-            <td>35.7</td>
-            <td>36.0</td>
-            <td>35.6</td>
-            <td>35.7</td>
-            <td>35.7</td>
+            <td><strong>37.8</strong></td>
+            <td>38.1</td><td>37.5</td><td>37.6</td><td>37.9</td><td>38.2</td><td>37.4</td><td>37.7</td><td>37.9</td>
           </tr>
         </tbody>
       </table>
@@ -303,10 +271,18 @@
   </div>
 </section>
 
-  
+<!-- JS for auto-generating Rank numbers -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const rows = document.querySelectorAll('table tbody tr');
+    rows.forEach((row, index) => {
+      const rankCell = row.querySelector('.rank-cell');
+      rankCell.innerHTML = `<strong>${index + 1}</strong>`;
+    });
+  });
+</script>
 
   
-
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>

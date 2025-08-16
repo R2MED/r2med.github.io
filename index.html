@@ -226,8 +226,9 @@
         <thead style="background-color: #f8f8ff;">
           <tr style="border-bottom: 2px solid #ddd;">
             <th>Rank</th>
-            <th style="min-width: 120px;">LLM</th>
+            <th style="min-width: 120px;">Rewriter</th>
             <th style="min-width: 120px;">Retriever</th>
+            <th style="min-width: 120px;">Reranker</th>
             <th style="min-width: 80px;">Avg.</th>
             <th>Bio-logy</th>
             <th>Bio-informatics</th>
@@ -240,13 +241,27 @@
           </tr>
         </thead>
         <tbody>
-       
+          
+          <tr style="border-bottom: 1px solid #eee;">
+            <td class="rank-cell"></td>
+            <td style="min-width: 120px;"><a>-</a></td>
+            <td>
+              <a href="https://huggingface.co/intfloat/e5-mistral-7b-instruct" style="color: #9370DB; font-weight: bold; min-width: 120px;">E5-mistral-7b-instruct</a><br>
+            </td>
+            <td>
+              <a href="https://github.com/8421BCD/ReasonRank" style="color: #9370DB; font-weight: bold; min-width: 120px;">ReasonRank(32B)</a><br>
+            </td>
+            <td><strong>42.85</strong></td>
+            <td>45.56</td><td>67.73</td><td>63.45</td><td>18.90</td><td>30.60</td><td>41.08</td><td>46.11</td><td>29.35</td>
+          </tr>
+          
           <tr style="border-bottom: 1px solid #eee;">
             <td class="rank-cell"></td>
             <td style="min-width: 120px;"><a href="https://openai.com/index/openai-o3-mini/">o3-mini</a></td>
             <td>
               <a href="https://huggingface.co/nvidia/NV-Embed-v2" style="color: #9370DB; font-weight: bold; min-width: 120px;">NV-Embed-v2</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>41.35</strong></td>
             <td>34.01</td><td>55.90</td><td>51.28</td><td>28.99</td><td>40.30</td><td>48.97</td><td>50.86</td><td>20.47</td>
           </tr>
@@ -257,6 +272,7 @@
             <td>
               <a href="https://github.com/castorini/pyserini" style="color: #9370DB; font-weight: bold; min-width: 120px;">BM25</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>41.01</strong></td>
             <td>59.65</td><td>46.56</td><td>47.17</td><td>34.64</td><td>55.22</td><td>41.65</td><td>35.32</td><td>7.86</td>
           </tr>
@@ -268,6 +284,7 @@
             <td>
               <a href="https://huggingface.co/nvidia/NV-Embed-v2" style="color: #9370DB; font-weight: bold; min-width: 120px;">NV-Embed-v2</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>39.56</strong></td>
             <td>31.25</td><td>52.81</td><td>49.55</td><td>25.25</td><td>38.33</td><td>48.93</td><td>48.57</td><td>21.77</td>
           </tr>
@@ -279,6 +296,7 @@
             <td>
               <a href="https://huggingface.co/nvidia/NV-Embed-v2" style="color: #9370DB; font-weight: bold; min-width: 120px;">NV-Embed-v2</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>39.37</strong></td>
             <td>33.61</td><td>54.15</td><td>50.83</td><td>23.08</td><td>36.09</td><td>47.35</td><td>48.51</td><td>21.30</td>
           </tr>
@@ -290,6 +308,7 @@
             <td>
               <a href="https://openai.com/index/new-embedding-models-and-api-updates/" style="color: #9370DB; font-weight: bold; min-width: 120px;">Text-embedding-3-large</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>39.09</strong></td>
             <td>31.5</td><td>48.61</td><td>48.19</td><td>31.74</td><td>39.51</td><td>51.69</td><td>38.92</td><td>22.56</td>
           </tr>
@@ -301,6 +320,7 @@
             <td>
               <a href="https://huggingface.co/nvidia/NV-Embed-v2" style="color: #9370DB; font-weight: bold; min-width: 120px;">NV-Embed-v2</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>38.52</strong></td>
             <td>32.83</td><td>53.31</td><td>50.32</td><td>22.98</td><td>33.78</td><td>47.04</td><td>46.53</td><td>21.35</td>
           </tr>
@@ -312,6 +332,7 @@
             <td>
               <a href="https://openai.com/index/new-embedding-models-and-api-updates/" style="color: #9370DB; font-weight: bold; min-width: 120px;">Text-embedding-3-large</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>38.24</strong></td>
             <td>29.77</td><td>47.7</td><td>48.4</td><td>27.46</td><td>36.79</td><td>52.93</td><td>39.26</td><td>23.63</td>
           </tr>
@@ -323,6 +344,7 @@
             <td>
               <a href="https://huggingface.co/nvidia/NV-Embed-v2" style="color: #9370DB; font-weight: bold; min-width: 120px;">NV-Embed-v2</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>38.22</strong></td>
             <td>31.82</td><td>53.33</td><td>51.32</td><td>21.68</td><td>32.8</td><td>45.93</td><td>47.37</td><td>21.52</td>
           </tr>
@@ -334,6 +356,7 @@
             <td>
               <a href="https://huggingface.co/nvidia/NV-Embed-v2" style="color: #9370DB; font-weight: bold; min-width: 120px;">NV-Embed-v2</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>38.00</strong></td>
             <td>33.46</td><td>51.04</td><td>50.20</td><td>22.91</td><td>32.02</td><td>46.88</td><td>46.18</td><td>21.32</td>
           </tr>
@@ -345,6 +368,7 @@
             <td>
               <a href="https://openai.com/index/new-embedding-models-and-api-updates/" style="color: #9370DB; font-weight: bold; min-width: 120px;">Text-embedding-3-large</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>37.87</strong></td>
             <td>34.73</td><td>45.38</td><td>47.18</td><td>26.95</td><td>33.71</td><td>50.78</td><td>40.02</td><td>24.17</td>
           </tr>
@@ -356,6 +380,7 @@
             <td>
               <a href="https://openai.com/index/new-embedding-models-and-api-updates/" style="color: #9370DB; font-weight: bold; min-width: 120px;">Text-embedding-3-large</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>37.79</strong></td>
             <td>32.15</td><td>45.99</td><td>47.97</td><td>27.28</td><td>36.92</td><td>51.24</td><td>38.96</td><td>21.82</td>
           </tr>
@@ -367,6 +392,7 @@
             <td>
               <a href="https://github.com/castorini/pyserini" style="color: #9370DB; font-weight: bold; min-width: 120px;">BM25</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>37.70</strong></td>
             <td>57.34</td><td>43.02</td><td>41.22</td><td>26.55</td><td>49.6</td><td>40.61</td><td>32.8</td><td>10.42</td>
           </tr>
@@ -378,6 +404,7 @@
             <td>
               <a href="https://openai.com/index/new-embedding-models-and-api-updates/" style="color: #9370DB; font-weight: bold; min-width: 120px;">Text-embedding-3-large</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>37.36</strong></td>
             <td>30.08</td><td>47.44</td><td>48.98</td><td>24.94</td><td>33.24</td><td>50.49</td><td>41.39</td><td>22.32</td>
           </tr>
@@ -389,6 +416,7 @@
             <td>
               <a href="https://openai.com/index/new-embedding-models-and-api-updates/" style="color: #9370DB; font-weight: bold; min-width: 120px;">Text-embedding-3-large</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>37.30</strong></td>
             <td>32.43</td><td>46.95</td><td>47.84</td><td>25.19</td><td>31.22</td><td>51.67</td><td>36.58</td><td>26.51</td>
           </tr>
@@ -400,6 +428,7 @@
             <td>
               <a href="https://huggingface.co/nvidia/NV-Embed-v2" style="color: #9370DB; font-weight: bold; min-width: 120px;">NV-Embed-v2</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>36.82</strong></td>
             <td>31.21</td><td>52.27</td><td>51.19</td><td>17.48</td><td>27.53</td><td>46.96</td><td>46.90</td><td>21.05</td>
           </tr>
@@ -411,6 +440,7 @@
             <td>
               <a href="https://huggingface.co/nvidia/NV-Embed-v2" style="color: #9370DB; font-weight: bold; min-width: 120px;">NV-Embed-v2</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>36.82</strong></td>
             <td>32.26</td><td>52.43</td><td>49.91</td><td>21.08</td><td>31.29</td><td>46.14</td><td>41.06</td><td>20.38</td>
           </tr>
@@ -422,6 +452,7 @@
             <td>
               <a href="https://openai.com/index/new-embedding-models-and-api-updates/" style="color: #9370DB; font-weight: bold; min-width: 120px;">Text-embedding-3-large</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>36.51</strong></td>
             <td>32.51</td><td>45.46</td><td>46.76</td><td>24.81</td><td>31.76</td><td>52.78</td><td>35.1</td><td>22.89</td>
           </tr>
@@ -433,6 +464,7 @@
             <td>
               <a href="https://huggingface.co/nvidia/NV-Embed-v2" style="color: #9370DB; font-weight: bold; min-width: 120px;">NV-Embed-v2</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>36.08</strong></td>
             <td>33.10</td><td>51.82</td><td>49.39</td><td>18.78</td><td>27.38</td><td>45.94</td><td>42.16</td><td>20.05</td>
           </tr>
@@ -444,6 +476,7 @@
             <td>
               <a href="https://openai.com/index/new-embedding-models-and-api-updates/" style="color: #9370DB; font-weight: bold; min-width: 120px;">Text-embedding-3-large</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>35.76</strong></td>
             <td>31.31</td><td>46.83</td><td>48.14</td><td>21.42</td><td>28.32</td><td>51.22</td><td>37.11</td><td>21.7</td>
           </tr>
@@ -455,6 +488,7 @@
             <td>
               <a href="https://github.com/castorini/pyserini" style="color: #9370DB; font-weight: bold; min-width: 120px;">BM25</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>35.57</strong></td>
             <td>60.78</td><td>41.58</td><td>43.93</td><td>24.07</td><td>39.94</td><td>37.52</td><td>28.38</td><td>8.34</td>
           </tr>
@@ -466,6 +500,7 @@
             <td>
               <a href="https://huggingface.co/nvidia/NV-Embed-v2" style="color: #9370DB; font-weight: bold; min-width: 120px;">NV-Embed-v2</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>35.34</strong></td>
             <td>31.34</td><td>52.35</td><td>49.76</td><td>16.40</td><td>22.77</td><td>45.31</td><td>43.40</td><td>21.35</td>
           </tr>
@@ -477,6 +512,7 @@
             <td>
               <a href="https://huggingface.co/nvidia/NV-Embed-v2" style="color: #9370DB; font-weight: bold; min-width: 120px;">NV-Embed-v2</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>35.11</strong></td>
             <td>30.84</td><td>50.66</td><td>49.07</td><td>15.05</td><td>20.46</td><td>47.36</td><td>45.49</td><td>21.95</td>
           </tr>
@@ -488,6 +524,7 @@
             <td>
               <a href="https://github.com/castorini/pyserini" style="color: #9370DB; font-weight: bold; min-width: 120px;">BM25</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>35.03</strong></td>
             <td>58.24</td><td>42.35</td><td>42.2</td><td>23.7</td><td>38.12</td><td>41.65</td><td>26.66</td><td>7.34</td>
           </tr>
@@ -499,6 +536,7 @@
             <td>
               <a href="https://openai.com/index/new-embedding-models-and-api-updates/" style="color: #9370DB; font-weight: bold; min-width: 120px;">Text-embedding-3-large</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>34.68</strong></td>
             <td>30.39</td><td>44.89</td><td>47.62</td><td>20.33</td><td>27.89</td><td>49.04</td><td>36.26</td><td>21.04</td>
           </tr>
@@ -510,6 +548,7 @@
             <td>
               <a href="https://openai.com/index/new-embedding-models-and-api-updates/" style="color: #9370DB; font-weight: bold; min-width: 120px;">Text-embedding-3-large</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>34.25</strong></td>
             <td>31.37</td><td>45.46</td><td>46.44</td><td>21.13</td><td>24.69</td><td>48.05</td><td>34.45</td><td>22.38</td>
           </tr>
@@ -521,6 +560,7 @@
             <td>
               <a href="https://github.com/castorini/pyserini" style="color: #9370DB; font-weight: bold; min-width: 120px;">BM25</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>33.84</strong></td>
             <td>56.84</td><td>39.48</td><td>43.01</td><td>22</td><td>34.42</td><td>41.62</td><td>26.2</td><td>7.16</td>
           </tr>
@@ -532,6 +572,7 @@
             <td>
               <a href="https://github.com/castorini/pyserini" style="color: #9370DB; font-weight: bold; min-width: 120px;">BM25</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>33.43</strong></td>
             <td>49.77</td><td>40.02</td><td>38.47</td><td>21.91</td><td>39.54</td><td>39.3</td><td>28.38</td><td>10.01</td>
           </tr>
@@ -543,6 +584,7 @@
             <td>
               <a href="https://github.com/castorini/pyserini" style="color: #9370DB; font-weight: bold; min-width: 120px;">BM25</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>33.29</strong></td>
             <td>49.52</td><td>38.86</td><td>39.48</td><td>22.12</td><td>38.4</td><td>34.95</td><td>33.86</td><td>9.13</td>
           </tr>
@@ -554,6 +596,7 @@
             <td>
               <a href="https://openai.com/index/new-embedding-models-and-api-updates/" style="color: #9370DB; font-weight: bold; min-width: 120px;">Text-embedding-3-large</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>32.89</strong></td>
             <td>28.3</td><td>43.6</td><td>48.03</td><td>15.2</td><td>18.57</td><td>48.38</td><td>38.15</td><td>22.92</td>
           </tr>
@@ -565,6 +608,7 @@
             <td>
               <a href="https://huggingface.co/nvidia/NV-Embed-v2" style="color: #9370DB; font-weight: bold; min-width: 120px;">NV-Embed-v2</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>32.69</strong></td>
             <td>30.12</td><td>49.95</td><td>49.39</td><td>13.37</td><td>19.49</td><td>42.99</td><td>38.36</td><td>17.86</td>
           </tr>
@@ -576,6 +620,7 @@
             <td>
               <a href="https://github.com/castorini/pyserini" style="color: #9370DB; font-weight: bold; min-width: 120px;">BM25</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>32.40</strong></td>
             <td>52.54</td><td>39.42</td><td>41.05</td><td>16.99</td><td>33.87</td><td>37.32</td><td>28.67</td><td>9.32</td>
           </tr>
@@ -587,6 +632,7 @@
             <td>
               <a href="https://huggingface.co/nvidia/NV-Embed-v2" style="color: #9370DB; font-weight: bold; min-width: 120px;">NV-Embed-v2</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>31.74</strong></td>
             <td>25.76</td><td>47.53</td><td>47.57</td><td>11.98</td><td>18.88</td><td>45.66</td><td>38.57</td><td>17.95</td>
           </tr>
@@ -598,6 +644,7 @@
             <td>
               <a href="https://openai.com/index/new-embedding-models-and-api-updates/" style="color: #9370DB; font-weight: bold; min-width: 120px;">Text-embedding-3-large</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>31.53</strong></td>
             <td>30.15</td><td>42.33</td><td>45.79</td><td>15.45</td><td>19.73</td><td>48.64</td><td>30.39</td><td>19.79</td>
           </tr>
@@ -609,6 +656,7 @@
             <td>
               <a href="https://huggingface.co/nvidia/NV-Embed-v2" style="color: #9370DB; font-weight: bold; min-width: 120px;">NV-Embed-v2</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>31.43</strong></td>
             <td>27.15</td><td>50.10</td><td>47.81</td><td>10.90</td><td>16.72</td><td>44.05</td><td>39.91</td><td>14.81</td>
           </tr>
@@ -620,6 +668,7 @@
             <td>
               <a href="https://huggingface.co/BAAI/bge-large-en-v1.5" style="color: #9370DB; font-weight: bold; min-width: 120px;">BGE-Large-en-v1.5</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>31.29</strong></td>
             <td>22.18</td><td>37.62</td><td>43.97</td><td>25.39</td><td>34.91</td><td>44.55</td><td>24.65</td><td>17.04</td>
           </tr>
@@ -631,6 +680,7 @@
             <td>
               <a href="https://huggingface.co/GritLM/GritLM-7B" style="color: #9370DB; font-weight: bold; min-width: 120px;">GritLM-7B</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>31.12</strong></td>
             <td>24.99</td><td>43.98</td><td>45.94</td><td>12.32</td><td>19.86</td><td>39.88</td><td>37.08</td><td>24.94</td>
           </tr>
@@ -642,6 +692,7 @@
             <td>
               <a href="https://github.com/castorini/pyserini" style="color: #9370DB; font-weight: bold; min-width: 120px;">BM25</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>31.12</strong></td>
             <td>52.88</td><td>39.2</td><td>42.42</td><td>16.8</td><td>25.87</td><td>33.27</td><td>26.72</td><td>11.81</td>
           </tr>
@@ -653,6 +704,7 @@
             <td>
               <a href="https://huggingface.co/Salesforce/SFR-Embedding-Mistral" style="color: #9370DB; font-weight: bold; min-width: 120px;">SFR-Embedding-Mistral</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>30.65</strong></td>
             <td>19.56</td><td>45.91</td><td>46.01</td><td>11.98</td><td>17.49</td><td>44.19</td><td>36.36</td><td>23.71</td>
           </tr>
@@ -664,6 +716,7 @@
             <td>
               <a href="https://openai.com/index/new-embedding-models-and-api-updates/" style="color: #9370DB; font-weight: bold; min-width: 120px;">Text-embedding-3-large</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>30.19</strong></td>
             <td>24.48</td><td>40.91</td><td>47.65</td><td>11.62</td><td>16.78</td><td>47.79</td><td>32.27</td><td>20</td>
           </tr>
@@ -675,6 +728,7 @@
             <td>
               <a href="https://huggingface.co/BMRetriever/BMRetriever-7B" style="color: #9370DB; font-weight: bold; min-width: 120px;">BMRetriever-7B</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>30.18</strong></td>
             <td>23.62</td><td>44.01</td><td>44.91</td><td>11.55</td><td>16.95</td><td>46.88</td><td>29.14</td><td>24.36</td>
           </tr>
@@ -686,6 +740,7 @@
             <td>
               <a href="https://github.com/castorini/pyserini" style="color: #9370DB; font-weight: bold; min-width: 120px;">BM25</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>29.05</strong></td>
             <td>48.9</td><td>38.8</td><td>38.28</td><td>16.04</td><td>25.21</td><td>31.55</td><td>22.47</td><td>11.15</td>
           </tr>
@@ -697,6 +752,7 @@
             <td>
               <a href="https://huggingface.co/BAAI/bge-large-en-v1.5" style="color: #9370DB; font-weight: bold; min-width: 120px;">BGE-Large-en-v1.5</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>28.98</strong></td>
             <td>18.88</td><td>35.5</td><td>39.72</td><td>22</td><td>27.48</td><td>43.29</td><td>26.46</td><td>18.5</td>
           </tr>
@@ -708,6 +764,7 @@
             <td>
               <a href="https://huggingface.co/BAAI/bge-large-en-v1.5" style="color: #9370DB; font-weight: bold; min-width: 120px;">BGE-Large-en-v1.5</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>28.66</strong></td>
             <td>21.92</td><td>32.34</td><td>42.71</td><td>20.1</td><td>24.34</td><td>42.91</td><td>26.31</td><td>18.66</td>
           </tr>
@@ -719,6 +776,7 @@
             <td>
               <a href="https://huggingface.co/BAAI/bge-large-en-v1.5" style="color: #9370DB; font-weight: bold; min-width: 120px;">BGE-Large-en-v1.5</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>28.63</strong></td>
             <td>22.59</td><td>32.97</td><td>41.29</td><td>19.45</td><td>27.18</td><td>45.43</td><td>23.28</td><td>16.85</td>
           </tr>
@@ -730,6 +788,7 @@
             <td>
               <a href="https://openai.com/index/new-embedding-models-and-api-updates/" style="color: #9370DB; font-weight: bold; min-width: 120px;">Text-embedding-3-large</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>28.57</strong></td>
             <td>23.82</td><td>40.51</td><td>44.05</td><td>11.78</td><td>15.01</td><td>47.43</td><td>28.87</td><td>17.12</td>
           </tr>
@@ -741,6 +800,7 @@
             <td>
               <a href="https://huggingface.co/BAAI/bge-large-en-v1.5" style="color: #9370DB; font-weight: bold; min-width: 120px;">BGE-Large-en-v1.5</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>28.41</strong></td>
             <td>21.68</td><td>34.79</td><td>40.33</td><td>19.06</td><td>23.93</td><td>42.74</td><td>26.44</td><td>18.28</td>
           </tr>
@@ -752,6 +812,7 @@
             <td>
               <a href="https://huggingface.co/BAAI/bge-large-en-v1.5" style="color: #9370DB; font-weight: bold; min-width: 120px;">BGE-Large-en-v1.5</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>28.28</strong></td>
             <td>23.88</td><td>30.34</td><td>42.16</td><td>18.48</td><td>25.49</td><td>42.96</td><td>25.46</td><td>17.47</td>
           </tr>
@@ -763,6 +824,7 @@
             <td>
               <a href="https://huggingface.co/BAAI/bge-large-en-v1.5" style="color: #9370DB; font-weight: bold; min-width: 120px;">BGE-Large-en-v1.5</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>28.18</strong></td>
             <td>21.4</td><td>37.06</td><td>41.44</td><td>15.91</td><td>22.85</td><td>45.78</td><td>24.61</td><td>16.36</td>
           </tr>
@@ -774,6 +836,7 @@
             <td>
               <a href="https://www.voyageai.com/" style="color: #9370DB; font-weight: bold; min-width: 120px;">Voyage-3</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>27.34</strong></td>
             <td>25.42</td><td>38.98</td><td>41.63</td><td>8.74</td><td>9.36</td><td>45.28</td><td>28.68</td><td>20.64</td>
           </tr>
@@ -785,6 +848,7 @@
             <td>
               <a href="https://huggingface.co/BAAI/bge-large-en-v1.5" style="color: #9370DB; font-weight: bold; min-width: 120px;">BGE-Large-en-v1.5</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>26.59</strong></td>
             <td>21.01</td><td>32.89</td><td>39.45</td><td>16.68</td><td>22.55</td><td>43.4</td><td>20.75</td><td>15.95</td>
           </tr>
@@ -796,6 +860,7 @@
             <td>
               <a href="https://huggingface.co/BAAI/bge-large-en-v1.5" style="color: #9370DB; font-weight: bold; min-width: 120px;">BGE-Large-en-v1.5</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>26.40</strong></td>
             <td>19.61</td><td>33.42</td><td>40.76</td><td>14.78</td><td>19.3</td><td>42.38</td><td>23.84</td><td>17.1</td>
           </tr>
@@ -807,6 +872,7 @@
             <td>
               <a href="https://github.com/castorini/pyserini" style="color: #9370DB; font-weight: bold; min-width: 120px;">BM25</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>26.38</strong></td>
             <td>48.49</td><td>29.38</td><td>41.75</td><td>12.17</td><td>19.48</td><td>26.63</td><td>24.48</td><td>8.67</td>
           </tr>
@@ -818,6 +884,7 @@
             <td>
               <a href="https://huggingface.co/BAAI/bge-large-en-v1.5" style="color: #9370DB; font-weight: bold; min-width: 120px;">BGE-Large-en-v1.5</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>26.19</strong></td>
             <td>23.6</td><td>33.76</td><td>41.51</td><td>14.41</td><td>17.98</td><td>39.77</td><td>22.23</td><td>16.22</td>
           </tr>
@@ -829,6 +896,7 @@
             <td>
               <a href="https://huggingface.co/intfloat/e5-mistral-7b-instruct" style="color: #9370DB; font-weight: bold; min-width: 120px;">E5-mistral-7b-instruct</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>24.92</strong></td>
             <td>18.81</td><td>42.86</td><td>41.77</td><td>6.70</td><td>11.54</td><td>23.58</td><td>31.17</td><td>22.93</td>
           </tr>
@@ -840,6 +908,7 @@
             <td>
               <a href="https://huggingface.co/BAAI/bge-large-en-v1.5" style="color: #9370DB; font-weight: bold; min-width: 120px;">BGE-Large-en-v1.5</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>24.78</strong></td>
             <td>19.14</td><td>30.38</td><td>37.31</td><td>12.53</td><td>14.81</td><td>38.93</td><td>24.51</td><td>20.6</td>
           </tr>
@@ -851,6 +920,7 @@
             <td>
               <a href="https://huggingface.co/BMRetriever/BMRetriever-2B" style="color: #9370DB; font-weight: bold; min-width: 120px;">BMRetriever-2B</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>24.69</strong></td>
             <td>19.50</td><td>33.30</td><td>39.45</td><td>9.97</td><td>9.31</td><td>38.01</td><td>25.65</td><td>22.30</td>
           </tr>
@@ -862,6 +932,7 @@
             <td>
               <a href="https://github.com/castorini/pyserini" style="color: #9370DB; font-weight: bold; min-width: 120px;">BM25</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>24.56</strong></td>
             <td>36.51</td><td>26.92</td><td>34.62</td><td>10.02</td><td>13.88</td><td>34.98</td><td>28.18</td><td>11.37</td>
           </tr>
@@ -873,6 +944,7 @@
             <td>
               <a href="https://huggingface.co/BAAI/bge-large-en-v1.5" style="color: #9370DB; font-weight: bold; min-width: 120px;">BGE-Large-en-v1.5</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>24.00</strong></td>
             <td>19.89</td><td>30.18</td><td>40.7</td><td>12.98</td><td>15.05</td><td>41.02</td><td>17.09</td><td>15.07</td>
           </tr>
@@ -884,6 +956,7 @@
             <td>
               <a href="https://huggingface.co/BAAI/bge-large-en-v1.5" style="color: #9370DB; font-weight: bold; min-width: 120px;">BGE-Large-en-v1.5</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>22.14</strong></td>
             <td>16.8</td><td>26.83</td><td>36.74</td><td>8.4</td><td>12.17</td><td>37.15</td><td>22.84</td><td>16.16</td>
           </tr>
@@ -895,6 +968,7 @@
             <td>
               <a href="https://github.com/castorini/pyserini" style="color: #9370DB; font-weight: bold; min-width: 120px;">BM25</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>20.03</strong></td>
             <td>34.38</td><td>20.31</td><td>30.04</td><td>5.47</td><td>13.18</td><td>31.66</td><td>19.69</td><td>5.53</td>
           </tr>
@@ -906,6 +980,7 @@
             <td>
               <a href="https://huggingface.co/hkunlp/instructor-xl" style="color: #9370DB; font-weight: bold; min-width: 120px;">InstructOR-XL</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>18.13</strong></td>
             <td>21.56</td><td>32.91</td><td>36.79</td><td>4.63</td><td>4.29</td><td>14.18</td><td>14.49</td><td>16.17</td>
           </tr>
@@ -917,6 +992,7 @@
             <td>
               <a href="https://huggingface.co/BMRetriever/BMRetriever-410M" style="color: #9370DB; font-weight: bold; min-width: 120px;">BMRETRIEVER-410M</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>18.10</strong></td>
             <td>12.37</td><td>29.92</td><td>31.26</td><td>4.46</td><td>6.28</td><td>25.31</td><td>17.46</td><td>17.73</td>
           </tr>
@@ -928,6 +1004,7 @@
             <td>
               <a href="https://huggingface.co/BAAI/bge-large-en-v1.5" style="color: #9370DB; font-weight: bold; min-width: 120px;">BGE-Large-en-v1.5</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>17.02</strong></td>
             <td>12.71</td><td>27.04</td><td>27.76</td><td>4.10</td><td>8.33</td><td>26.45</td><td>15.06</td><td>14.72</td>
           </tr>
@@ -939,6 +1016,7 @@
             <td>
               <a href="https://huggingface.co/hkunlp/instructor-large" style="color: #9370DB; font-weight: bold; min-width: 120px;">InstructOR-L</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>16.21</strong></td>
             <td>15.82</td><td>29.71</td><td>36.88</td><td>3.84</td><td>4.81</td><td>15.84</td><td>9.02</td><td>13.77</td>
           </tr>
@@ -950,6 +1028,7 @@
             <td>
               <a href="https://github.com/castorini/pyserini" style="color: #9370DB; font-weight: bold; min-width: 120px;">BM25</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>15.13</strong></td>
             <td>19.19</td><td>21.55</td><td>19.68</td><td>0.66</td><td>2.55</td><td>23.69</td><td>21.66</td><td>12.02</td>
           </tr>
@@ -961,6 +1040,7 @@
             <td>
               <a href="https://huggingface.co/facebook/contriever-msmarco" style="color: #9370DB; font-weight: bold; min-width: 120px;">Contriever</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>11.76</strong></td>
             <td>9.15</td><td>18.02</td><td>25.22</td><td>1.71</td><td>2.52</td><td>11.47</td><td>13.40</td><td>12.57</td>
           </tr>
@@ -972,6 +1052,7 @@
             <td>
               <a href="https://huggingface.co/ncbi/MedCPT-Query-Encoder" style="color: #9370DB; font-weight: bold; min-width: 120px;">MedCPT</a><br>
             </td>
+            <td style="min-width: 120px;"><a>-</a></td>
             <td><strong>9.02</strong></td>
             <td>2.15</td><td>17.57</td><td>14.74</td><td>1.68</td><td>2.02</td><td>11.33</td><td>14.62</td><td>8.03</td>
           </tr>

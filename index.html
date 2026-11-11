@@ -222,12 +222,18 @@
       (e.g., size of retrieval model, whether LLMs like GPT-4 are used, etc.)!
     </p>
 
+    <!-- 角标说明 -->
+    <p style="margin-top: 1rem; font-size: 0.95rem; color: #666; line-height: 1.6;">
+      <strong>&dagger;</strong> Not open-sourced; no public link provided by the submitters.
+    </p>
+
     <!-- 表格 -->
     <div style="overflow-x:auto; margin-top: 2rem;">
       <table style="width: 100%; border-collapse: collapse; text-align: center; font-size: 1rem;">
         <thead style="background-color: #f8f8ff;">
           <tr style="border-bottom: 2px solid #ddd;">
             <th>Rank</th>
+            <th style="min-width: 140px;">Work</th>
             <th style="min-width: 120px;">Rewriter</th>
             <th style="min-width: 120px;">Retriever</th>
             <th style="min-width: 120px;">Reranker</th>
@@ -243,9 +249,9 @@
           </tr>
         </thead>
         <tbody>
-          <tr style="border-bottom: 1px solid #eee;">
+          <tr style="border-bottom: 1px solid #eee;" data-work="kt">
             <td class="rank-cell"></td>
-            <td style="min-width: 120px;"><a>KT-Agentic Search (GPT-4o)<sup>&dagger;</sup></a></td>
+            <td style="min-width: 120px;"><a href="https://openai.com/index/hello-gpt-4o/">GPT-4o</a></td>
             <td>
               <a style="color: #9370DB; font-weight: bold; min-width: 120px;">Nemotron-3-Embed-8B</a><br>
             </td>
@@ -256,7 +262,7 @@
             <td>45.00</td><td>64.47</td><td>59.83</td><td>29.09</td><td>43.44</td><td>64.57</td><td>52.29</td><td>30.95</td>
           </tr>
 
-           <tr style="border-bottom: 1px solid #eee;">
+           <tr style="border-bottom: 1px solid #eee;" data-work="reasonembed">
             <td class="rank-cell"></td>
             <td style="min-width: 120px;"><a>-</a></td>
             <td>
@@ -267,7 +273,7 @@
             <td>54.01</td><td>66.33</td><td>67.64</td><td>20.93</td><td>27.96</td><td>51.38</td><td>33.76</td><td>23.43</td>
           </tr>
           
-          <tr style="border-bottom: 1px solid #eee;">
+          <tr style="border-bottom: 1px solid #eee;" data-work="reasonrank">
             <td class="rank-cell"></td>
             <td style="min-width: 120px;"><a>-</a></td>
             <td>
@@ -1088,25 +1094,41 @@
         </tbody>
       </table>
     </div>
-    <p style="margin-top: 0.75rem; font-size: 0.85rem; color: #666; line-height: 1.5;">
-      &dagger; Self-reported by the submitters (KT); the system is not open-sourced and the scores have not yet been independently reproduced with the official evaluation code.
-    </p>
   </div>
 </section>
 
-<!-- JS for auto-generating Rank numbers -->
+<!-- JS for auto-sorting by Avg, numbering ranks, and filling the Work column -->
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const tbody = document.querySelector('table tbody');
     const rows = Array.from(tbody.querySelectorAll('tr'));
+
+    // Work-column content keyed by each row's data-work attribute.
+    const works = {
+      'kt':          'KT-Agentic Search<sup>&dagger;</sup>',
+      'reasonembed': '<a href="https://arxiv.org/abs/2510.08252" target="_blank">ReasonEmbed</a>',
+      'reasonrank':  '<a href="https://arxiv.org/abs/2508.07050" target="_blank">ReasonRank</a>',
+    };
+    // Default: official baselines evaluated by the R2MED team.
+    const defaultWork = '<a href="https://arxiv.org/abs/2505.14558" target="_blank">R2MED</a>';
+
     // Sort rows by the Avg. column (5th <td>) in descending order.
     const getAvg = (row) => parseFloat(row.querySelectorAll('td')[4]?.textContent) || 0;
     rows.sort((a, b) => getAvg(b) - getAvg(a));
-    // Re-insert in sorted order and assign rank numbers automatically.
+
+    // Re-insert in sorted order, fill the Work column, and assign rank numbers.
     rows.forEach((row, index) => {
       tbody.appendChild(row);
       const rankCell = row.querySelector('.rank-cell');
       if (rankCell) rankCell.innerHTML = `<strong>${index + 1}</strong>`;
+      if (rankCell && !row.querySelector('.work-cell')) {
+        const workCell = document.createElement('td');
+        workCell.className = 'work-cell';
+        workCell.style.minWidth = '140px';
+        const key = row.getAttribute('data-work');
+        workCell.innerHTML = (key && works[key]) ? works[key] : defaultWork;
+        rankCell.insertAdjacentElement('afterend', workCell);
+      }
     });
   });
 </script>

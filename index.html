@@ -228,8 +228,20 @@
     </p>
 
     <!-- 表格 -->
+    <style>
+      #leaderboard-table th,
+      #leaderboard-table td {
+        padding: 8px 14px;
+        vertical-align: middle;
+      }
+      /* Keep headers and all numeric columns (Avg. + 8 datasets) on a single line */
+      #leaderboard-table th,
+      #leaderboard-table td:nth-child(n+6) {
+        white-space: nowrap;
+      }
+    </style>
     <div style="overflow-x:auto; margin-top: 2rem;">
-      <table style="width: 100%; border-collapse: collapse; text-align: center; font-size: 1rem;">
+      <table id="leaderboard-table" style="width: 100%; border-collapse: collapse; text-align: center; font-size: 1rem;">
         <thead style="background-color: #f8f8ff;">
           <tr style="border-bottom: 2px solid #ddd;">
             <th>Rank</th>
